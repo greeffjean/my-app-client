@@ -11,6 +11,13 @@
   color: white;
 }
 
+.App .navbar-brand:hover {
+  color: white;
+}
+
+.App .navbar-brand:active {
+  color: white;
+}
 
 .navbar-default .navbar-nav>li>a {
   color: white;
@@ -19,5 +26,6 @@
 .navbar-default .navbar-nav>li>a:hover  {
   color: white;
 }
+
 
 

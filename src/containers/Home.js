@@ -3,6 +3,7 @@ import "./Home.css";
 import welcome from "./welcome-image.jpg";
 
 export default function Home() {
+
   return (
     <div className="Home">
       <div className="lander">
