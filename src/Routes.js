@@ -10,17 +10,20 @@ import AuthenticatedRoute from "./components/AuthenticatedRoute";
 
 export default function Routes() {
     return (
-        <Switch>
-            <AuthenticatedRoute  exact path="/">
-            <Home />
-            </AuthenticatedRoute>
-            <UnauthenticatedRoute exact path="/login">
-                <Login />
-            </UnauthenticatedRoute>
-            <UnauthenticatedRoute exact path="/signup">
-                <Signup />
-            </UnauthenticatedRoute>
-            <NotFound />
-        </Switch>
+        <div style={{width: "70vw", height: "94vh", background: "hsl(0, 0%, 97%)"}}>
+            <Switch>
+                <AuthenticatedRoute exact path="/">
+                    <Home />
+                </AuthenticatedRoute>
+                <UnauthenticatedRoute exact path="/login">
+                    <Login />
+                </UnauthenticatedRoute>
+                <UnauthenticatedRoute exact path="/signup">
+                    <Signup />
+                </UnauthenticatedRoute>
+                <NotFound />
+            </Switch>
+        </div>
+
     );
 }

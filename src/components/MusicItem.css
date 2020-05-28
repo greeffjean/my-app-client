@@ -1,0 +1,104 @@
+h2,
+h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    height: 18px;
+    width: 140px;
+}
+
+i {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+    color: lightgrey;
+}
+
+i:hover {
+   cursor: pointer;
+}
+
+.heart-active {
+    color: coral;
+}
+
+.item {
+    width: 24%;
+    margin: 0.5rem 0;
+    border: 1px solid lightgrey;
+    display: flex;
+    background: white;
+    align-items: center;
+    position: relative;
+}
+
+.item-left {}
+
+.item-left img {
+    padding: 0.8rem;
+    width: 100px;
+    height: 100px;
+}
+
+.item-right {
+    height: 80%;
+    display: block;
+    align-items: center;
+}
+
+.item-right h2 {
+    margin-left: 10px;
+    font-family: Geneva;
+    font-size: 1.8rem;
+    display: inline-block;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: black;
+    margin-bottom: 0;
+}
+
+.item-right h3 {
+    margin-top: 2px;
+    margin-left: 10px;
+    color: grey;
+    font-family: Geneva;
+    font-size: 1.2rem;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+
+.item-right button {
+    background: transparent;
+    padding: 5px;
+    border-radius: 3px;
+    margin-left: 10px;
+    font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 1600px) {
+    h2,
+    h3 {
+        height: 18px;
+        width: 100px;
+    }
+}
+@media only screen and (max-width: 1400px) {
+    h2,
+    h3 {
+        height: 18px;
+        width: 80px;
+    }
+}

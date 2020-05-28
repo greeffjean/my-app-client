@@ -1,0 +1,36 @@
+.genre-bar {
+    width: 70vw;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    border: 1px solid lightgrey;
+    position: fixed;
+    z-index: 1000;
+}
+
+.genre-bar:hover {
+    cursor: pointer;
+}
+
+.genre-bar .items {
+    padding: .5rem 0;
+    width: 14.3%;
+    text-align: center;
+    color: grey;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+}
+
+.genre-bar .items:hover {
+   border-bottom: 3px solid coral;
+}
+
+.genre-bar .border-right {
+    border-right: 1px solid lightgrey;
+}
+
+.genre-bar .border-left {
+    border-left: 1px solid lightgrey;
+}
+

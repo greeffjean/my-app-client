@@ -26,7 +26,7 @@ export default function Signup() {
     const { userHasAuthenticated } = useAppContext();
     const [isLoading, setIsLoading] = useState(false);
 
- 
+    
     /*  */
     function validateForm() {
         return (

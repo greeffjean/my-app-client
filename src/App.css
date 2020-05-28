@@ -1,9 +1,19 @@
 .App {
-  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: hsl(0, 0%, 97%);
+  width: 100vw;
+  height: 100vh;
 }
 
-.App .navbar {
-  background: hsl(267, 79%, 30%);
+.App nav.navbar.navbar-default {
+  background: black;
+  width: 70vw;
+  margin: 0;
+  height: 5vh;
+  border: 1px solid black;
+  border-radius: 0;
 }
 
 .App .navbar-brand {

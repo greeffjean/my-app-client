@@ -39,16 +39,17 @@ function App() {
   /* Logout */
   async function handleLogout() {
     await Auth.signOut();
-
     userHasAuthenticated(false);
     history.push("/login");
   }
 
-
+const innerWidth = window.innerWidth;
+const innerHeight = window.innerHeight;
   /* Return */
   return (
+    
     !isAuthenticating &&
-    <div className="App container">
+    <div className="App container" style={{width: innerWidth, height: innerHeight}}>
       <Navbar fluid collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
