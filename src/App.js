@@ -48,8 +48,8 @@ const innerHeight = window.innerHeight;
   /* Return */
   return (
     
-    !isAuthenticating &&
-    <div className="App container" style={{width: innerWidth, height: innerHeight}}>
+  (  !isAuthenticating &&
+    <div className="App container" style={{width: innerWidth, height: innerHeight, background: "hsl(0, 0%, 97%)"}}>
       <Navbar fluid collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
@@ -78,7 +78,7 @@ const innerHeight = window.innerHeight;
       >
         <Routes />
       </AppContext.Provider>
-    </div>
+    </div>)
   );
 }
 
