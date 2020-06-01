@@ -38,9 +38,9 @@ The following resources were used to create/deploy this app:
 * [Seed](https://seed.run/docs/)
 * [Netlify](https://docs.netlify.com/#get-started)
 * [Serverless Stack](https://serverless-stack.com/)
-* [React Bootstrap] (https://react-bootstrap.github.io/)
-* [React Router] (https://reacttraining.com/react-router/web/guides/quick-start)
-* [AWS Amplify] (https://docs.amplify.aws/)
+* [React Bootstrap](https://react-bootstrap.github.io/)
+* [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
+* [AWS Amplify](https://docs.amplify.aws/)
 
 
 ## Built With 
@@ -53,6 +53,7 @@ AWS Amplify
 ## Authors
 Jean Greeff, GitHub - https://github.com/greeffjean
 
+## Auto Generated 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
