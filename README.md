@@ -1,37 +1,58 @@
 ## Project Title
 My App Client - A simple Auth app.
 
-## Prerequisites
-You will need an internet connection, Node.js installed on your computer.
+The back-end repo is [here](https://github.com/greeffjean/my-app-api)
 
-## Installing
-1. Install the latest version of NodeJS
-2. Open your Code Editor, open terminal and enter `npm install`.
-( now you have all the neccessary modules to test and deploy your app )
 
-## Deployment 
-1. Open your Code Editor, open terminal and enter `npm run build`.
-2. Then enter `cd build`.
-( from the build directory you can stage your website, my personal platform I use is Netlify or you can use a React scripts: `npm run start` )
+# Setup Instructions
+
+First clone the repo
+
+```
+$ git clone https://github.com/greeffjean/my-app-client.git
+
+```
+
+Then you need to install the dependancies: 
+
+```
+$ npm install
+```
+
+
+Then you start the dev server:
+
+```
+$ npm start
+
+```
+
+Your backend server should be running on `localhost://3000`, create-react-app will default to `localhost://3001` for you.
+
+# Deployment Instructrions
+
+**TO BE DONE**
+
+The following resources were used to create/deploy this app: 
+
+* [Seed](https://seed.run/docs/)
+* [Netlify](https://docs.netlify.com/#get-started)
+* [Serverless Stack](https://serverless-stack.com/)
+* [React Bootstrap] (https://react-bootstrap.github.io/)
+* [React Router] (https://reacttraining.com/react-router/web/guides/quick-start)
+* [AWS Amplify] (https://docs.amplify.aws/)
+
 
 ## Built With 
 Visual Studio Code
 React.js
-
-## Contributing
-Amazon Web Service.
-
-## Versioning
-none
+React.Bootstrap
+React.Router
+AWS Amplify
 
 ## Authors
 Jean Greeff, GitHub - https://github.com/greeffjean
 
-## License
-none
-
-## Acknowledgments
-none
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
