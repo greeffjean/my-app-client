@@ -35,7 +35,6 @@ Your backend server should be running on `localhost://3000`, create-react-app wi
 
 The following resources were used to create/deploy this app: 
 
-* [Seed](https://seed.run/docs/)
 * [Netlify](https://docs.netlify.com/#get-started)
 * [Serverless Stack](https://serverless-stack.com/)
 * [React Bootstrap](https://react-bootstrap.github.io/)
@@ -53,7 +52,7 @@ AWS Amplify
 ## Authors
 Jean Greeff, GitHub - https://github.com/greeffjean
 
-## Auto Generated 
+## Auto Generated
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
