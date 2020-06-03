@@ -1,3 +1,59 @@
+## Project Title
+My App Client - A simple Auth app.
+
+The back-end repo is [here](https://github.com/greeffjean/my-app-api)
+
+
+# Setup Instructions
+
+First clone the repo
+
+```
+$ git clone https://github.com/greeffjean/my-app-client.git
+
+```
+
+Then you need to install the dependancies: 
+
+```
+$ npm install
+```
+
+
+Then you start the dev server:
+
+```
+$ npm start
+
+```
+
+Your backend server should be running on `localhost://3000`, create-react-app will default to `localhost://3001` for you.
+
+# Deployment Instructrions
+
+**TO BE DONE**
+
+The following resources were used to create/deploy this app: 
+
+* [Netlify](https://docs.netlify.com/#get-started)
+* [Serverless Stack](https://serverless-stack.com/)
+* [React Bootstrap](https://react-bootstrap.github.io/)
+* [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
+* [AWS Amplify](https://docs.amplify.aws/)
+
+
+## Built With 
+Visual Studio Code
+React.js
+React.Bootstrap
+React.Router
+AWS Amplify
+
+## Authors
+Jean Greeff, GitHub - https://github.com/greeffjean
+
+## Auto Generated
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
