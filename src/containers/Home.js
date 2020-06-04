@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { API } from "aws-amplify";
 import "./Home.css";
 import GenreBar from "../components/GenreBar";
 import { AppContext } from "../libs/contextLib";
@@ -26,23 +25,6 @@ export default function Home() {
   await MusicDatabase.searchPlayList(3220851222).then(response => data = response.tracks.data );
   setTracks(data)
   setLoading(false)
-}
-
-
-async function handleSubmit(event) {
-  event.preventDefault();
-
-  try {
-    await createTrack({ content });
-  } catch (e) {
-    return [{ error: e.message }];
-  }
-}
-
-function createTrack(track) {
-  return API.post("notes", "/notes", {
-    body: track
-  });
 }
 
 

@@ -1,18 +1,36 @@
 import React, {useState} from "react";
 import './MusicItem.css';
+import { API } from "aws-amplify";
 
 export default function MusicItem(props) {
 
   let [heartActive, setHeartActive] = useState(false)
 
-  function heartFunction() {
-   if(!heartActive) {
-    setHeartActive(true)
-    return
-   }
-    if(heartActive) {
-      setHeartActive(false)
-    }
+ 
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const track = props.data;
+
+    if(!heartActive) {
+    
+      setHeartActive(true)
+      try {
+        await createTrack( {content} );
+        console.log("success")
+      } catch (e) {
+        return [{ error: e.message }];
+      }
+
+      if(heartActive) {
+        setHeartActive(false)
+      }
+     }
+  }
+  
+  function createTrack() {
+    return API.post("MyApp", "/MyApp", {
+      body: props.data
+    });
   }
 
 
@@ -22,7 +40,7 @@ export default function MusicItem(props) {
 <div className="item-right">
     <h2>{props.data.artist.name}</h2>
     <h3>{props.data.album.title} </h3>
-    <i onClick={heartFunction} className={heartActive  ? "fa fa-heart heart-active" : "fa fa-heart"}></i>
+    <i onClick={(e) => handleSubmit(e)} className={heartActive  ? "fa fa-heart heart-active" : "fa fa-heart"}></i>
 </div>
 </div>
     );
