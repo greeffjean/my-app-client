@@ -1,5 +1,5 @@
 ## Project Title
-My App Client - A simple Auth app.
+My App Client - A simple Auth app with Database integration.
 
 The back-end repo is [here](https://github.com/greeffjean/my-app-api)
 

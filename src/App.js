@@ -45,16 +45,17 @@ function App() {
     history.push("/login");
   }
 
+  /* Device screen sizes for styling and UI bugs */
 const innerWidth = window.innerWidth;
 const innerHeight = window.innerHeight;
-  /* Return */
+
+/*Return*/
   return (
-    
   (  !isAuthenticating &&
     <div className="App container" style={{width: innerWidth, height: innerHeight, background: "hsl(0, 0%, 97%)"}}>
       <Navbar fluid collapseOnSelect>
         <Navbar.Header style={{display: "flex", alignItems: "baseline"}}>
-            <Link to="/"><img style={{height: "25px", width: "220px", marginTop: "11px"}} src={logo} /> </Link>
+            <Link to="/"><img style={{height: "25px", width: "145px", marginTop: "13px"}} src={logo} /> </Link>
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>

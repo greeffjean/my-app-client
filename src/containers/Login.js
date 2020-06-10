@@ -17,10 +17,12 @@ export default function Login() {
     password: ""
   });
 
+  /*validate form*/
   function validateForm() {
     return fields.email.length > 0 && fields.password.length > 0;
   }
 
+    /*Submit credentials*/
   async function handleSubmit(event) {
     event.preventDefault();
 
@@ -36,6 +38,7 @@ export default function Login() {
     }
   }
 
+    /*Return*/
   return (
     <div className="Login">
       <form onSubmit={handleSubmit}>

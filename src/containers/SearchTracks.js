@@ -23,7 +23,7 @@ export default function Home() {
 
 
 
-  /* Functions */
+  /* Fetch default data from Deezer */
   async function loadHomeTracks() {
     let data = [];
     await MusicDatabase.searchPlayList(3220851222).then(response => data = response.tracks.data);
@@ -32,7 +32,7 @@ export default function Home() {
   }
 
 
-  /*  */
+  /* Return */
   return (
     <div className="Home">
       <AppContext.Provider value={{ tracks, setTracks, setLoading }}>

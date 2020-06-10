@@ -27,7 +27,7 @@ export default function Signup() {
     const [isLoading, setIsLoading] = useState(false);
 
     
-    /*  */
+    /* Validate form */
     function validateForm() {
         return (
             fields.email.length > 0 &&
@@ -36,12 +36,12 @@ export default function Signup() {
         );
     }
 
-    /*  */
+    /* Validate confirm */
     function validateConfirmationForm() {
         return fields.confirmationCode.length > 0;
     }
 
-    /*  */
+    /* Submit credentials */
 
     async function handleSubmit(event) {
         event.preventDefault();
@@ -61,7 +61,7 @@ export default function Signup() {
         }
     }
 
-    /*  */
+    /* Submit confirmation code */
     async function handleConfirmationSubmit(event) {
         event.preventDefault();
 
@@ -79,7 +79,7 @@ export default function Signup() {
         }
     }
 
-    /*  */
+    /* Render confirmation form */
     function renderConfirmationForm() {
         return (
             <form onSubmit={handleConfirmationSubmit}>
@@ -106,7 +106,7 @@ export default function Signup() {
         );
     }
 
-    /*  */
+    /* Render sign up form */
     function renderForm() {
         return (
             <form onSubmit={handleSubmit}>
@@ -147,7 +147,7 @@ export default function Signup() {
             </form>
         );
     }
-
+/*Return*/
     return (
         <div className="Signup">
             {newUser === null ? renderForm() : renderConfirmationForm()}

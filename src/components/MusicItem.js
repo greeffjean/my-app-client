@@ -12,6 +12,7 @@ export default function MusicItem(props) {
   let [heartActive, setHeartActive] = useState(false)
   const {userTracks} = useAppContext();
 
+  /*Check for any existing tracks in user;s playlist for UI styling*/
   useEffect(function() {
     if(!heartActive && userTracks) {
       userTracks.map(val => {
@@ -24,12 +25,14 @@ export default function MusicItem(props) {
   }, [userTracks])
 
 
+   /*Create track data*/
   function createTrack(track) {
     return API.post("MyApp", "/MyApp", {
       body: track
     });
   }
 
+   /*Submit track data*/
   async function handleSubmit(event) {
     event.preventDefault();
     if (!heartActive) {
@@ -49,6 +52,7 @@ export default function MusicItem(props) {
   }
 
 
+   /*Del functions*/
   function deleteTrack() {
     return API.del("MyApp", `/MyApp/${itemId}`);
   }
@@ -76,7 +80,7 @@ export default function MusicItem(props) {
 
 
 
-
+ /*Return*/
   return (
     <div className="item">
       <div className="item-left"><img src={`${props.data.album.cover_medium}`} /></div>
