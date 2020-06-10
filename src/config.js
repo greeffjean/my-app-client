@@ -1,12 +1,16 @@
-export default {
-  apiGateway: {
-    REGION: "us-east-2",
-    URL: "https://exkbr67df8.execute-api.us-east-2.amazonaws.com/prod"
+
+
+
+export default{
+  apiGateway:{
+    REGION: process.env.REACT_APP_API_GATEWAY_REGION,
+    URL: process.env.REACT_APP_API_GATEWAY_URL
   },
   cognito: {
-    REGION: "us-east-2",
-    USER_POOL_ID: "us-east-2_O8qjghFmY",
-    APP_CLIENT_ID: "7cf7j2r2t1tetrucaqg6neacpm",
-    IDENTITY_POOL_ID: "us-east-2:455a9c95-804a-409b-89bd-688d62ecdde0"
+    REGION: process.env.REACT_APP_COGNITO_REGION,
+    USER_POOL_ID: process.env.REACT_APP_COGNITO_USER_POOL_ID,
+    APP_CLIENT_ID: process.env.REACT_APP_COGNITO_APP_CLIENT_ID,
+    IDENTITY_POOL_ID: process.env.REACT_APP_COGNITO_IDENTITY_POOL_ID
   }
 };
+

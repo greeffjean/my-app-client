@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 
 import Home from "./containers/Home";
+import SearchTracks from "./containers/SearchTracks";
 import NotFound from "./containers/NotFound";
 import Login from "./containers/Login";
 import Signup from "./containers/SignUp";
@@ -14,6 +15,9 @@ export default function Routes() {
             <Switch>
                 <AuthenticatedRoute exact path="/">
                     <Home />
+                </AuthenticatedRoute>
+                <AuthenticatedRoute exact path="/search-tracks">
+                    <SearchTracks />
                 </AuthenticatedRoute>
                 <UnauthenticatedRoute exact path="/login">
                     <Login />

@@ -5,6 +5,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { AppContext } from "./libs/contextLib";
 import { Auth } from "aws-amplify";
 import { onError } from "./libs/errorLib";
+import logo from "./logo.png"
 
 
 import Routes from "./Routes";
@@ -16,6 +17,7 @@ function App() {
   const history = useHistory();
   const [isAuthenticated, userHasAuthenticated] = useState(false);
   const [isAuthenticating, setIsAuthenticating] = useState(true);
+  const [userTracks, setUserTracks] = useState();
 
   /* Check if user is Logged in */
   useEffect(() => {
@@ -51,16 +53,17 @@ const innerHeight = window.innerHeight;
   (  !isAuthenticating &&
     <div className="App container" style={{width: innerWidth, height: innerHeight, background: "hsl(0, 0%, 97%)"}}>
       <Navbar fluid collapseOnSelect>
-        <Navbar.Header>
-          <Navbar.Brand>
-            <Link to="/">MyApp</Link>
-          </Navbar.Brand>
+        <Navbar.Header style={{display: "flex", alignItems: "baseline"}}>
+            <Link to="/"><img style={{height: "25px", width: "220px", marginTop: "11px"}} src={logo} /> </Link>
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
             {isAuthenticated
-              ? <NavItem onClick={handleLogout}>Logout</NavItem>
+              ? <> 
+              <NavItem ><Link style={{color: "coral"}} to={"/"}>Your Tracks</Link></NavItem>
+              <NavItem onClick={handleLogout}>Logout</NavItem>
+              </>
               : <>
                 <LinkContainer to="/signup">
                   <NavItem>Signup</NavItem>
@@ -74,7 +77,7 @@ const innerHeight = window.innerHeight;
         </Navbar.Collapse>
       </Navbar>
       <AppContext.Provider
-        value={{ isAuthenticated, userHasAuthenticated }}
+        value={{ isAuthenticated, userHasAuthenticated, userTracks, setUserTracks }}
       >
         <Routes />
       </AppContext.Provider>
