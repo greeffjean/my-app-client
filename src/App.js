@@ -30,10 +30,7 @@ function App() {
       userHasAuthenticated(true);
     }
     catch (e) {
-      if (e !== 'No current user') {
-        if(e){
-          onError(e);
-        }
+      console.log(e)
       }
     }
 
