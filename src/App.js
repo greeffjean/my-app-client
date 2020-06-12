@@ -31,7 +31,9 @@ function App() {
     }
     catch (e) {
       if (e !== 'No current user') {
-        onError(e);
+        if(e){
+          onError(e);
+        }
       }
     }
 
